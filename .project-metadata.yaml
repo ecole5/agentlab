@@ -1,4 +1,10 @@
----
+name: WorkshopDeploy
+description: "Allows you to deploy a workshop with an amp"
+author: "Evan Cole"
+date: "2025-08-15"
+specification_version: "1.0"
+prototype_version: "1.0"
+
 environment_variables:
   NUM_USERS:
     default: "5"
