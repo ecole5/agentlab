@@ -12,7 +12,7 @@ environment_variables:
     description: "How many users are doing the workshop?"
     required: true
     
-   TEAM_NAME:
+  TEAM_NAME:
     default: "AgentLabGroup"
     description: "Name of of the CAI team with acesss permssions to the projects"
     required: true
