@@ -1,10 +1,3 @@
-name: Workshop Deploy
-description: "Allows you to deploy a workshop with an amp"
-author: "Evan Cole"
-date: "2025-08-15"
-specification_version: "1.0"
-prototype_version: "1.0"
-
 # 1) Ask the user for a value when launching the AMP
 environment_variables:
   NUM_USERS:
@@ -14,7 +7,7 @@ environment_variables:
     
   TEAM_NAME:
     default: "AgentLabGroup"
-    description: "Name of of the CAI team with acesss permssions to the projects"
+    description: "Name of the CAI team with access permissions to the projects"
     required: true
 
 # (Optional) recommend a runtime
@@ -27,11 +20,12 @@ tasks:
   # 2) Create jobs
   - type: create_job
     name: Provision
-    entity_label: provision_job       
+    entity_label: provision_job
     script: provision.py
     kernel: python3
     cpu: 1
     memory: 2
+    short_summary: "Create a provision job"
 
   - type: create_job
     name: Permission
@@ -40,8 +34,9 @@ tasks:
     kernel: python3
     cpu: 1
     memory: 2
-    
-   - type: create_job
+    short_summary: "Create a permission job"
+
+  - type: create_job
     name: Teardown
     entity_label: teardown_job
     script: teardown.py
