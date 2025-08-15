@@ -6,9 +6,9 @@ import time
 import cmlapi
 from cmlapi.rest import ApiException
 from pprint import pprint
+import os
 
-num_projects = 4
-team="AgentLabGroup"
+num_projects = int(os.environ["NUM_USERS"])
 
 # Create an instance of the API client
 api_instance = cmlapi.default_client()

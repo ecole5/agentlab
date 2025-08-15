@@ -2,9 +2,10 @@ from __future__ import print_function
 import re
 import cmlapi
 from cmlapi.rest import ApiException
+import os 
 
-NUM_PROJECTS = 4
-TEAM = "AgentLabGroup"
+num_projects = int(os.environ["NUM_USERS"])
+team = os.environ["TEAM_NAME"]
 
 api = cmlapi.default_client()
 

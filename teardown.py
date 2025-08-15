@@ -3,9 +3,10 @@ import time
 import cmlapi
 from cmlapi.rest import ApiException
 from pprint import pprint
+import os 
 
 # How many "AgentLab {i}" prefixes to target
-num_projects = 4  # change as needed
+num_projects = int(os.environ["NUM_USERS"])
 
 # API client
 api_instance = cmlapi.default_client()
