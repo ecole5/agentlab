@@ -4,7 +4,7 @@ import cmlapi
 from cmlapi.rest import ApiException
 import os 
 
-num_projects = int(os.environ["NUM_USERS"])
+NUM_PROJECTS = int(os.environ["NUM_USERS"])
 TEAM = os.environ["TEAM_NAME"]
 
 api = cmlapi.default_client()
