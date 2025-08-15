@@ -40,7 +40,7 @@ for i in range(1, num_projects + 1):
         # Define the AMP configuration
         amp_body = cmlapi.ConfigurePrototypeRequest(
             run_import_tasks=True,
-            runtime_identifier='docker.repository.cloudera.com/cloudera/cdsw/ml-runtime-pbj-jupyterlab-python3.10-standard:2025.06.1-b5',
+            runtime_identifier='docker.repository.cloudera.com/cloudera/cdsw/ml-runtime-pbj-workbench-python3.9-standard:2025.06.1-b5',
             execute_amp_steps=True
         )
 
