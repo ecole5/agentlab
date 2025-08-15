@@ -56,5 +56,8 @@ for i in range(1, num_projects + 1):
         
     except (ApiException, ValueError) as e:
         print(f"❌ Exception creating project {project_name}: {e}\n")
+
+
+time.sleep(180)
      
 
