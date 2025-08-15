@@ -1,23 +1,18 @@
-# 1) Ask the user for a value when launching the AMP
+---
 environment_variables:
   NUM_USERS:
     default: "5"
-    description: "How many users are doing the workshop?"
+    description: How many users are doing the workshop?
     required: true
-    
   TEAM_NAME:
-    default: "AgentLabGroup"
-    description: "Name of the CAI team with access permissions to the projects"
+    default: AgentLabGroup
+    description: Name of the CAI team with access permissions to the projects
     required: true
-
-# (Optional) recommend a runtime
 runtimes:
   - editor: Workbench
     kernel: Python 3.10
     edition: Standard
-
 tasks:
-  # 2) Create jobs
   - type: create_job
     name: Provision
     entity_label: provision_job
@@ -25,8 +20,7 @@ tasks:
     kernel: python3
     cpu: 1
     memory: 2
-    short_summary: "Create a provision job"
-
+    short_summary: Create a provision job
   - type: create_job
     name: Permission
     entity_label: permission_job
@@ -34,8 +28,7 @@ tasks:
     kernel: python3
     cpu: 1
     memory: 2
-    short_summary: "Create a permission job"
-
+    short_summary: Create a permission job
   - type: create_job
     name: Teardown
     entity_label: teardown_job
@@ -43,13 +36,11 @@ tasks:
     kernel: python3
     cpu: 1
     memory: 2
-    short_summary: "Create a teardown job"
-
-  # 3) Run them in order (permission after provision)
+    short_summary: Create a teardown job
   - type: run_job
     entity_label: provision_job
-    short_summary: "Run provision"
-
+    short_summary: Run provision
   - type: run_job
     entity_label: permission_job
-    short_summary: "Run permission"
+    short_summary: Run permission
+
