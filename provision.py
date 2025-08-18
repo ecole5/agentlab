@@ -58,6 +58,6 @@ for i in range(1, num_projects + 1):
         print(f"❌ Exception creating project {project_name}: {e}\n")
 
 
-time.sleep(30)
+time.sleep(180)
      
 
